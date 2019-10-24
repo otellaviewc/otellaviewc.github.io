@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://otellaviewc.github.io">
-  <title>hexo 博客使用 | otellc的博客</title>
+  <title>基础算法：数组循环右移 | otellc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="新手上路，利用hexo相当轻松的搭建起了个人博客，转手丢到了一边，几天时间过去了果然忘了个干净，再到书签里一个个翻找就太麻烦了，故撰此文记录从最简单的hexo使用到各种更进一步的功能配置等等详细使用方法。">
-<meta name="keywords" content="hexo,yilia">
+  <meta name="description" content="来源：PAT (Basic Level) Practice （中文）1008 数组元素循环右移问题 (20 分)   1008 数组元素循环右移问题一个数组$A$中存有$N（&amp;gt;0）$个整数，在不允许使用另外数组的前提下，将每个整数循环向右移$M（≥0）$个位置，即将$A$中的数据由$（A_0A_1…A_{N-1}）$变换为$（A_{N-M}…A_{N-1}A_0A_1…A_{N-M-1}）$">
+<meta name="keywords" content="算法,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 博客使用">
-<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2019&#x2F;10&#x2F;22&#x2F;hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC&#x2F;index.html">
+<meta property="og:title" content="基础算法：数组循环右移">
+<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2019&#x2F;10&#x2F;24&#x2F;%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB&#x2F;index.html">
 <meta property="og:site_name" content="otellc的博客">
-<meta property="og:description" content="新手上路，利用hexo相当轻松的搭建起了个人博客，转手丢到了一边，几天时间过去了果然忘了个干净，再到书签里一个个翻找就太麻烦了，故撰此文记录从最简单的hexo使用到各种更进一步的功能配置等等详细使用方法。">
+<meta property="og:description" content="来源：PAT (Basic Level) Practice （中文）1008 数组元素循环右移问题 (20 分)   1008 数组元素循环右移问题一个数组$A$中存有$N（&amp;gt;0）$个整数，在不允许使用另外数组的前提下，将每个整数循环向右移$M（≥0）$个位置，即将$A$中的数据由$（A_0A_1…A_{N-1}）$变换为$（A_{N-M}…A_{N-1}A_0A_1…A_{N-M-1}）$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-24T13:44:11.274Z">
+<meta property="og:updated_time" content="2019-10-24T14:24:17.317Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -141,51 +141,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-使用指导" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-基础算法：数组循环右移" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo 博客使用
+      基础算法：数组循环右移
     </h1>
   
 
         
-        <a href="/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="archive-article-date">
-  	<time datetime="2019-10-22T13:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
+        <a href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/" class="archive-article-date">
+  	<time datetime="2019-10-24T12:46:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>新手上路，利用hexo相当轻松的搭建起了个人博客，转手丢到了一边，几天时间过去了果然忘了个干净，再到书签里一个个翻找就太麻烦了，故撰此文记录从最简单的<a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo</a>使用到各种更进一步的功能配置等等详细使用方法。</p>
+        <p>来源：<a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805316250615808" target="_blank" rel="noopener">PAT (Basic Level) Practice （中文）1008 数组元素循环右移问题 (20 分)</a></p>
+<hr>
+<blockquote>
+<h3 id="1008-数组元素循环右移问题"><a href="#1008-数组元素循环右移问题" class="headerlink" title="1008 数组元素循环右移问题"></a><center>1008 数组元素循环右移问题<center></h3><p>一个数组$A$中存有$N（&gt;0）$个整数，在不允许使用另外数组的前提下，将每个整数循环向右移$M（≥0）$个位置，即将$A$中的数据由$（A_0A_1…A_{N-1}）$变换为$（A_{N-M}…A_{N-1}A_0A_1…A_{N-M-1}）$（最后M个数循环移至最前面的M个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
+</blockquote>
 <a id="more"></a>
 
-<h2 id="1-hexo基本命令"><a href="#1-hexo基本命令" class="headerlink" title="1. hexo基本命令"></a>1. hexo基本命令</h2><p>具体如何创建起博客网站就不再手打一份了，具体参考如下博客：  </p>
-<ul>
-<li><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029" target="_blank" rel="noopener">hexo史上最全搭建教程-zjufangzh</a>  </li>
-</ul>
-<p>我们只写上适合我们的用法就行了~</p>
-<h3 id="创建、发表新的博客："><a href="#创建、发表新的博客：" class="headerlink" title="创建、发表新的博客："></a>创建、发表新的博客：</h3><p>从我们的博客网站文件夹那里启动Git bush，例如我的是<code>D:\otellaviewc.github.io</code>，直接从命令行窗口输入命令如下：  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h4><p>每个输入包含一个测试用例，第1行输入$N（1≤N≤100）$和$M（≥0）$；第2行输入$N$个整数，之间用空格分隔。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h4><p>在一行中输出循环右移$M$位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。</p>
+<h4 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h4><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">6 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<h4 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h4><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">5 </span><span class="number">6</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
 
-<p>将会在<code>D:\otellaviewc.github.io\source\_posts\</code>创建一个markdown文件(.md),如果一切正常的话，稍等几秒后会显示结果：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Created: D:\otellaviewc.github.io\<span class="built_in">source</span>\_posts\My_New_Post.md</span><br></pre></td></tr></table></figure>
+<hr>
+<p>一开始，我以为直接数组挨个赋值<code>A[i] = A[(i+M) % N]</code>就可以实现了，毕竟我只会这一种方法… 不过果然不行啦，照着这个模N替换的思路思索了很久依旧无果，只能放弃+当场自闭了。<br>接着就想到可以将数组循环右移1位m次，稳定不会出错，但这无疑就是最低效的实现，其它的邪招也没有用的必要，果然还是求助大佬来得实在些…</p>
+<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>取样例进行观察，我们首先发现输出<code>5 6 1 2 3 4</code>实际上是由两部分两部分组成，各保持有序。<br>于是将原数组看做两部分：<code>1 2 3 4 | 5 6</code><br>试着分别做一些骚操作，发现将其分别反转得：<code>4 3 2 1 | 6 5</code><br>即是我们想要的结果的逆序，再对整体反转即得：<code>5 6 | 1 2 3 4</code><br>……这是什么神仙洞察力(╯‵□′)╯︵┻━┻  </p>
+<h3 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h3><p>经过上面的分析，实现起来就很简单了，首先是反转函数：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = m, j = n, temp;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        temp = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = temp;</span><br><span class="line">        ++i;</span><br><span class="line">        --j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>之后可以打开对应位置的markdown文件，推荐使用<a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>方便编写，非常轻便好用。<br>markdown文件的写法可以参考其官方文档：<a href="http://xianbai.me/learn-md/index.html" target="_blank" rel="noopener">Markdown 入门参考</a>，我或许也会抽空记录一下…  </p>
-<p>完成编写了之后再从之前的Git bush里输入以下命令一键生成(g即generate)&amp;部署(-d即deploy)博客至github：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+<p>接着求解函数用就对了：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    M %= N;</span><br><span class="line">    reverse(A, <span class="number">0</span>, N - M - <span class="number">1</span>);</span><br><span class="line">    reverse(A, N - M, N - <span class="number">1</span>);</span><br><span class="line">    reverse(A, <span class="number">0</span>, N - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>然后刷新博客网站就可以看到新上传或者修改的博客文章了，不过根据个人经验，通常都需要稍等几分钟才会显示出更新，所以不用过于心急。  </p>
-<p>事实上，更推荐在上传博客前先清空之前生成的文件再上传，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>不做这一步也行，不过当进行了一下更改例如更改主题后发现真的没反应的时候就试试加上这句命令吧。  </p>
-<p>以上就是发表一篇博客的全部操作了，通常情况下两句命令就搞定了一切。如果遇到了一些其它的问题，不妨到<a href="https://hexo.io/docs/" target="_blank" rel="noopener">hexo官网</a>上去寻求答案吧。</p>
-<h2 id="2-博客界面美化：yilia"><a href="#2-博客界面美化：yilia" class="headerlink" title="2. 博客界面美化：yilia"></a>2. 博客界面美化：yilia</h2><p>使用yilia主题可以给我们的博客界面带来极大的美化，以下将介绍一些简单常用的内容自定义方法。</p>
+<p>主函数输入输出&amp;全局变量，就直接省略吧，不再赘述。<br>代码没有进行测试，如果有什么地方错了就让它错着吧。<p align="right">(oﾟvﾟ)ノ</p></p>
 
       
 
@@ -199,11 +196,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
       		
 		</ul>
@@ -259,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://otellaviewc.github.io/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://otellaviewc.github.io/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,15 +270,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          基础算法：数组循环右移
-        
-      </div>
-    </a>
   
+    <a href="/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo 博客使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
