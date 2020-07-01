@@ -6,14 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://otellaviewc.github.io">
-  <title>Archives: 2019 | otellc的博客</title>
+  <title>使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用 | otellc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Android,博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="otellc的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用使用 VSCode 可方便的在 Vue 全家桶的环境下来开发网页应用，不过由于所有的内容都需要使用插件和命令行的方式来实现，操作相对复杂，以下简单的记录下搭建环境的全过程，包括：  Vue 工程的搭建（_默认已安装好并使用过 vue-cli_） 网页开发所需的主要插件及提升工作效率的">
+<meta name="keywords" content="网页开发,Vue,Bootstrap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用">
+<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2020&#x2F;07&#x2F;01&#x2F;%E4%BD%BF%E7%94%A8-VSCode-Vue-BootstrapVue-VueRouter-Vuex-%E5%BC%80%E5%8F%91%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="otellc的博客">
+<meta property="og:description" content="使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用使用 VSCode 可方便的在 Vue 全家桶的环境下来开发网页应用，不过由于所有的内容都需要使用插件和命令行的方式来实现，操作相对复杂，以下简单的记录下搭建环境的全过程，包括：  Vue 工程的搭建（_默认已安装好并使用过 vue-cli_） 网页开发所需的主要插件及提升工作效率的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-01T04:56:39.063Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -142,148 +145,222 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-使用-VSCode-Vue-BootstrapVue-VueRouter-Vuex-开发网页应用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        <div align="center" class="post-count">
+          字数：1.3k字 | 预计阅读时长：4分钟
+        </div>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用
+    </h1>
+  
+
+        
+        <a href="/2020/07/01/%E4%BD%BF%E7%94%A8-VSCode-Vue-BootstrapVue-VueRouter-Vuex-%E5%BC%80%E5%8F%91%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-07-01T00:53:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用-VS-Code-Vue-BootstrapVue-Vue-Router-Vuex-开发网页应用"><a href="#使用-VS-Code-Vue-BootstrapVue-Vue-Router-Vuex-开发网页应用" class="headerlink" title="使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用"></a>使用 VS Code + Vue + BootstrapVue + Vue Router + Vuex 开发网页应用</h2><p>使用 VSCode 可方便的在 Vue 全家桶的环境下来开发网页应用，不过由于所有的内容都需要使用插件和命令行的方式来实现，操作相对复杂，以下简单的记录下搭建环境的全过程，包括：</p>
+<ol>
+<li>Vue 工程的搭建（_默认已安装好并使用过 vue-cli_）</li>
+<li>网页开发所需的主要插件及提升工作效率的插件的选择及配置</li>
+<li>Vue 全家桶的配置和安装</li>
+</ol>
+<a id="more"></a>
+
+<h3 id="搭建-Vue-工程"><a href="#搭建-Vue-工程" class="headerlink" title="搭建 Vue 工程"></a>搭建 Vue 工程</h3><p>我们使用 vue-cli 这个梯子来快速创建 vue 工程模板，在已经使用过 vue-cli 的情况下，创建工程是极为简单的，若未曾使用过，请参考如下博客：<br><a href="https://www.jianshu.com/p/70d9c04b8bac" target="_blank" rel="noopener">《用 VS Code 开发 Vue 应用》</a>，对 vue-cli 的安装、插件配置、prettier 的使用等内容进行了讲解，可简单的入门用。</p>
+<p>使用 vue-cli 创建 Vue 工程步骤如下：</p>
+<ol>
+<li>使用 VS Code 打开想要存放新建工程的文件夹，例如我是 <code>D:\Coding\VSCode</code>，需要在这个文件夹下使用命令行来创建项目。</li>
+<li>快捷键 <code>Ctrl + ~</code> 打开 bush，使用命令 <code>vue create project-name</code> 来创建新项目。</li>
+<li>创建成功后使用 VS Code 打开新建的项目的文件夹，即可开始开发。</li>
+<li><code>npm run serve</code> 编译启动项目。</li>
+<li>若是下载的别人的 Vue 项目，则可能需要先使用 <code>npm install</code> 命令来安装依赖项再编译启动项目。</li>
+</ol>
+<h3 id="网页开发所需的主要插件及提升工作效率的插件的选择及配置"><a href="#网页开发所需的主要插件及提升工作效率的插件的选择及配置" class="headerlink" title="网页开发所需的主要插件及提升工作效率的插件的选择及配置"></a>网页开发所需的主要插件及提升工作效率的插件的选择及配置</h3><p>必备插件：</p>
+<ol>
+<li><strong>Vutur</strong>，为 VS Code 提供 Vue 支持，使能正常识别 <code>.vue</code> 文件并渲染高亮等。</li>
+<li><strong>Vue 2 Snippets</strong>，提供 Vue 关键字的支持，方便自动补全代码。</li>
+<li><strong>ESLint</strong>，提供 JavaScript 语法检查支持。</li>
+<li><strong>Bootstrap 4, Font awesome 4, Font Awesome 5 Free &amp; Pro snippets for Visual studio code</strong>（这名字有点长），提供 Bootstrap 关键字的支持。</li>
+</ol>
+<p>以上插件基本都是即插即用（或许需要你重启一下编辑器），为了更方便的编写出规范的代码，这里同样强烈建议将 <strong>Prettier - Code formatter</strong> 插件作为必备插件之一，不过其在 VS Code 中的配置较为复杂一点，将在后面详细的对其进行讲解。</p>
+<p>提升工作效率必备插件：</p>
+<ol>
+<li><strong>Auto Rename Tag</strong>，自动修改匹配 html 标签。</li>
+<li><strong>Bracket Pair Colorizer</strong>，括号着色，方便识别对应括号（并且用习惯了后还挺漂亮的）。</li>
+<li><strong>Code Spell Checker</strong>，代码英文单词拼写检查。</li>
+<li><strong>GitLens — Git supercharged</strong>，提供更强健的 git 支持。</li>
+</ol>
+<p>提升工作品质的可选插件：</p>
+<ol>
+<li><strong>One Dark Pro</strong>，让你的编辑器更好看更养眼。</li>
+<li><strong>Material Icon Theme</strong>，让你的编辑器更好看更养眼。</li>
+<li><strong>live2d</strong>，让你的编辑器更好看更养眼，但好像有bug，可能对你的编辑器带来毁灭性的打击。（谢谢兄弟，马上重装系统）。</li>
+</ol>
+<p>最后对 Prettier 插件的使用进行一些详细的讲解：<br>Prettier 的默认设置与 VS Code 的代码格式化存在冲突的情况，首先需要对 VS Code 的设置进行一下禁用。<br>在项目根目录下新建 <code>.vscode</code> 文件夹并建立 <code>settings.json</code> 文件，设置如下内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"eslint.validate"</span>: [</span><br><span class="line">    <span class="string">"javascript"</span>,</span><br><span class="line">    <span class="string">"javascriptreact"</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">      <span class="attr">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"editor.codeActionsOnSave"</span>: &#123;</span><br><span class="line">    <span class="attr">"source.fixAll.eslint"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"editor.tabSize"</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">"editor.formatOnSave"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"prettier.semi"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"prettier.singleQuote"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样即可避免冲突的情况。<br>想在 Vue 项目中使用 Prettier 还需要先安装相应的 Vue 插件，在 bush 中使用命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @vue/eslint-config-prettier</span><br></pre></td></tr></table></figure>
+
+<p>安装此插件的过程中同时会提醒需要前置插件 <code>eslint-plugin-prettier@^3.1.0</code>，再手动安装即可：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D eslint-plugin-prettier@^<span class="number">3.1</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>最后在根目录下的 <code>package.json</code> 里的相应位置添加 prettier 扩展依赖（找到这个位置并在最后添加 <code>&quot;@vue/prettier&quot;</code> 这一项）：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">"extends": [</span><br><span class="line">  "plugin:vue/essential",</span><br><span class="line">  "eslint:recommended",</span><br><span class="line">  <span class="string">"@vue/prettier"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了配置。<br>在传递项目的过程中建议将 <code>.vscode</code> 文件夹从 <code>.gitignore</code> 中去除以保证对方与你的编辑器设置保持一致性。</p>
+<h3 id="在项目中添加-BootstrapVue"><a href="#在项目中添加-BootstrapVue" class="headerlink" title="在项目中添加 BootstrapVue"></a>在项目中添加 BootstrapVue</h3><p>这一部分内容可以看 <a href="https://bootstrap-vue.org/docs" target="_blank" rel="noopener">BootstrapVue 官方文档</a> 来学习使用，以下简单的记一下步骤。</p>
+<p>想要在 Vue 中使用 BootstrapVue，只需简单的安装一下插件即可，在命令行执行如下命令直接安装之：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue bootstrap-vue bootstrap</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后会显示缺少 <code>jquery@1.9.1</code> 依赖，同样安装一下：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery@<span class="number">1.9</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>接着在项目的入口处引入一下插件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; BootstrapVue, IconsPlugin &#125; <span class="keyword">from</span> <span class="string">'bootstrap-vue'</span></span><br><span class="line"></span><br><span class="line">Vue.use(BootstrapVue)</span><br><span class="line">Vue.use(IconsPlugin)</span><br></pre></td></tr></table></figure>
+
+<p>再引入 Bootstrap 的 css 文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'bootstrap/dist/css/bootstrap.css'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'bootstrap-vue/dist/bootstrap-vue.css'</span></span><br></pre></td></tr></table></figure>
+
+<p>大功告成。</p>
+<h3 id="在项目中添加-Vue-Router-和-Vuex"><a href="#在项目中添加-Vue-Router-和-Vuex" class="headerlink" title="在项目中添加 Vue Router 和 Vuex"></a>在项目中添加 Vue Router 和 Vuex</h3><p>现在还没用到，先放两个链接在这里：<br><a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener">Vue Router 官方介绍</a><br><a href="https://www.jianshu.com/p/054486340a9b" target="_blank" rel="noopener">Vuex 一篇文章总结</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/28/Quantum-field-theory-notes/" class="archive-article-date">
-  	<time datetime="2019-12-28T07:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/28/Quantum-field-theory-notes/">Quantum field theory notes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网页开发</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">物理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrap</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://otellaviewc.github.io/2020/07/01/%E4%BD%BF%E7%94%A8-VSCode-Vue-BootstrapVue-VueRouter-Vuex-%E5%BC%80%E5%8F%91%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/" class="archive-article-date">
-  	<time datetime="2019-10-24T12:46:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/02/OpenCV-Python%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OpenCV-Python入门笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/">基础算法：数组循环右移</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="archive-article-date">
-  	<time datetime="2019-10-22T13:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">hexo 博客使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -306,8 +383,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

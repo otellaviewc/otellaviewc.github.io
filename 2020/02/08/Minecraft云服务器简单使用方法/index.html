@@ -6,14 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://otellaviewc.github.io">
-  <title>Archives: 2019 | otellc的博客</title>
+  <title>Minecraft云服务器简单使用方法 | otellc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Android,博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="otellc的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="开服半个月了，深深的感受到了使用云服务器开mc服务器联机游玩的爽快，在此简单的记录一下服务器日常使用的操作步骤以免遗忘。 现在暂时简练的大致标注一下，待日后补充完善。">
+<meta name="keywords" content="Android,博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minecraft云服务器简单使用方法">
+<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2020&#x2F;02&#x2F;08&#x2F;Minecraft%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="otellc的博客">
+<meta property="og:description" content="开服半个月了，深深的感受到了使用云服务器开mc服务器联机游玩的爽快，在此简单的记录一下服务器日常使用的操作步骤以免遗忘。 现在暂时简练的大致标注一下，待日后补充完善。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-02-08T15:09:34.347Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -142,148 +145,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Minecraft云服务器简单使用方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        <div align="center" class="post-count">
+          字数：257字 | 预计阅读时长：1分钟
+        </div>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Minecraft云服务器简单使用方法
+    </h1>
+  
+
+        
+        <a href="/2020/02/08/Minecraft%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-02-08T14:38:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-08</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开服半个月了，深深的感受到了使用云服务器开mc服务器联机游玩的爽快，在此简单的记录一下服务器日常使用的操作步骤以免遗忘。</p>
+<p>现在暂时简练的大致标注一下，待日后补充完善。</p>
+<a id="more"></a>
+
+<h2 id="1-Minecraft服务器的启动与关闭"><a href="#1-Minecraft服务器的启动与关闭" class="headerlink" title="1. Minecraft服务器的启动与关闭"></a>1. Minecraft服务器的启动与关闭</h2><h3 id="连接到云服务器"><a href="#连接到云服务器" class="headerlink" title="连接到云服务器"></a>连接到云服务器</h3><p>第一步：使用PuTTY客户端连接到云服务器主机</p>
+<p>第二步：以root身份登入服务器</p>
+<h3 id="启动-进入Minecraft服务端运行的窗口"><a href="#启动-进入Minecraft服务端运行的窗口" class="headerlink" title="启动/进入Minecraft服务端运行的窗口"></a>启动/进入Minecraft服务端运行的窗口</h3><p><code>screen -r mc</code> 进入mc服务器运行的窗口</p>
+<h3 id="启动Minecraft服务器"><a href="#启动Minecraft服务器" class="headerlink" title="启动Minecraft服务器"></a>启动Minecraft服务器</h3><p>第一步：<code>cd /home/minecraft/</code>进入Minecraft服务端文件夹</p>
+<p>第二步：<code>./start.sh</code>启动服务器</p>
+<h3 id="关闭Minecraft服务器"><a href="#关闭Minecraft服务器" class="headerlink" title="关闭Minecraft服务器"></a>关闭Minecraft服务器</h3><p>在mc服务器的窗口使用指令<code>stop</code>安全关闭服务器</p>
+<h3 id="离开窗口同时保持服务端运行"><a href="#离开窗口同时保持服务端运行" class="headerlink" title="离开窗口同时保持服务端运行"></a>离开窗口同时保持服务端运行</h3><p>输入指令<code>screen</code>，按住<code>CTRL + A</code>，再按下<code>D</code>键来将切换窗口到后台运行</p>
+<h3 id="关闭窗口"><a href="#关闭窗口" class="headerlink" title="关闭窗口"></a>关闭窗口</h3><p><code>exit</code></p>
+<h3 id="退出服务器客户端"><a href="#退出服务器客户端" class="headerlink" title="退出服务器客户端"></a>退出服务器客户端</h3><p><code>exit</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/28/Quantum-field-theory-notes/" class="archive-article-date">
-  	<time datetime="2019-12-28T07:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/28/Quantum-field-theory-notes/">Quantum field theory notes</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">物理</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://otellaviewc.github.io/2020/02/08/Minecraft%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/" class="archive-article-date">
-  	<time datetime="2019-10-24T12:46:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/03/02/OpenCV-Python%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          OpenCV-Python入门笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/28/Quantum-field-theory-notes/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Quantum field theory notes</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/">基础算法：数组循环右移</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="archive-article-date">
-  	<time datetime="2019-10-22T13:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/hexo-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">hexo 博客使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -306,8 +320,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

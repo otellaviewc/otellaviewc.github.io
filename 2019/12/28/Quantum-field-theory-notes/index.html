@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://otellaviewc.github.io">
   <title>Quantum field theory notes | otellc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The Principle  of Least Action and Lagrangian Mechanics$$ m_j\frac{d^2x}{dt^2}=-\frac{\partial V}{\partial x_j} $$$$ \mathscr{L}=T-V $$$$ S[x(t)]=\int_{t_i}^{t_f}\mathscr{L}(x,\dot{x}) dt $$">
-<meta name="keywords" content="数学， 物理">
+  <meta name="description" content="The Principle  of Least Action and Lagrangian Mechanics$$ m_j\frac{d^2x}{dt^2}=-\frac{\partial V}{\partial x_j} $$$$ \mathscr{L}=T-V $$$$ S[x(t)]=\int_{t_i}^{t_f}\mathscr{L}(x,\dot{x}),dt $$">
+<meta name="keywords" content="数学,物理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quantum field theory notes">
 <meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2019&#x2F;12&#x2F;28&#x2F;Quantum-field-theory-notes&#x2F;index.html">
 <meta property="og:site_name" content="otellc的博客">
-<meta property="og:description" content="The Principle  of Least Action and Lagrangian Mechanics$$ m_j\frac{d^2x}{dt^2}=-\frac{\partial V}{\partial x_j} $$$$ \mathscr{L}=T-V $$$$ S[x(t)]=\int_{t_i}^{t_f}\mathscr{L}(x,\dot{x}) dt $$">
+<meta property="og:description" content="The Principle  of Least Action and Lagrangian Mechanics$$ m_j\frac{d^2x}{dt^2}=-\frac{\partial V}{\partial x_j} $$$$ \mathscr{L}=T-V $$$$ S[x(t)]=\int_{t_i}^{t_f}\mathscr{L}(x,\dot{x}),dt $$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-02T14:18:17.290Z">
+<meta property="og:updated_time" content="2020-01-11T12:22:58.655Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -54,7 +54,7 @@
 		
 
 		<nav>
-			总字数 <span class="post-count">2.9k</span>
+			总字数 <span class="post-count">4.8k</span>
 		</nav>
 		
 		<nav class="header-menu">
@@ -150,7 +150,7 @@
     
       <header class="article-header">
         <div align="center" class="post-count">
-          字数：1.7k字 | 预计阅读时长：10分钟
+          字数：1.9k字 | 预计阅读时长：12分钟
         </div>
         
   
@@ -168,7 +168,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="The-Principle-of-Least-Action-and-Lagrangian-Mechanics"><a href="#The-Principle-of-Least-Action-and-Lagrangian-Mechanics" class="headerlink" title="The Principle  of Least Action and Lagrangian Mechanics"></a>The Principle  of Least Action and Lagrangian Mechanics</h4><p>$$ m_j\frac{d^2x}{dt^2}=-\frac{\partial V}{\partial x_j} $$<br>$$ \mathscr{L}=T-V $$<br>$$ S[x(t)]=\int_{t_i}^{t_f}\mathscr{L}(x,\dot{x}) dt $$</p>
+        <h4 id="The-Principle-of-Least-Action-and-Lagrangian-Mechanics"><a href="#The-Principle-of-Least-Action-and-Lagrangian-Mechanics" class="headerlink" title="The Principle  of Least Action and Lagrangian Mechanics"></a>The Principle  of Least Action and Lagrangian Mechanics</h4><p>$$ m_j\frac{d^2x}{dt^2}=-\frac{\partial V}{\partial x_j} $$<br>$$ \mathscr{L}=T-V $$<br>$$ S[x(t)]=\int_{t_i}^{t_f}\mathscr{L}(x,\dot{x}),dt $$</p>
 <a id="more"></a>
 
 <p>First, realize that a functional $S[x(t)]$ is just a function of $n$ variables as $n\rightarrow\infty$. To find its minimum we simply generalize the procedure for the finite $n$ case. Recall that if $f=f(x_1,\cdots,x_n)=f(\mathbf{x})$; the minimum $\mathbf{x}^0$ is characterized by the fact that if we move away from it by a small amount $\mathbf{u}$ in any direction, the first-order change $\delta f^{(1)}$ in $f$ vanishes. If we make a Taylor expansion:</p>
@@ -176,13 +176,23 @@
 <p>then</p>
 <p>$$ \delta f^{(1)}\equiv\sum_{i=1}^n\frac{\partial f}{\partial x_i}\bigg\vert_{\mathbf{x}^0}u_i=0 $$</p>
 <p>We can deduce an equivalent and perhaps more familiar expression of the minimum condition by simply choose $\mathbf{u}$ to be along the $i$th direction.<br>Thus</p>
-<p>$$ \frac{\partial f}{\partial x_i}\bigg\vert_{\mathbf{x}^0}=0,\qquad i=1,\cdots,n$$</p>
+<p>$$ \frac{\partial f}{\partial x_i}\bigg\vert_{\mathbf{x}^0}=0,\qquad i=1,\cdots,n $$</p>
 <p>Now mimic this procedure for the action $S$, Let $x_{cl}(t)$ be the path of least action and $x_{cl}(t)+\eta(t)$ a “nearby” path. The requirement that all paths coincide at $t_i$ and $t_f$ means</p>
-<p>$$\eta(t_i)=\eta(t_f)=0$$</p>
+<p>$$ \eta(t_i)=\eta(t_f)=0 $$</p>
 <p>Now</p>
-<p>$$\begin{aligned}<br>S(x_{cl}(t)+\eta(t))=&amp;\int_{t_i}^{t_f}\mathscr{L}(x_{cl}(t)+\eta(t);\dot{x}<em>{cl}(t)+\dot{\eta}(t))dt\<br>=&amp;\int</em>{t_i}^{t_f}\bigg[\mathscr{L}(x_{cl},\dot{x}<em>{cl}(t))+\frac{\partial\mathscr{L}}{\partial x(t)}\bigg\vert</em>{x_{cl}}\cdot\eta(t)\<br>&amp;+\frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg\vert_{x_{cl}}\cdot\dot{\eta}(t)+\cdots\bigg]dt\<br>=&amp;S[x_{cl}(t)]+\delta S^{(1)}+\text{higher-order terms}<br>\end{aligned}$$</p>
+<p>$$\begin{aligned}<br>S(x_{cl}(t)+\eta(t))=&amp;\int_{t_i}^{t_f}\mathscr{L}(x_{cl}(t)+\eta(t);\dot{x}<em>{cl}(t)+\dot{\eta}(t)),dt\<br>=&amp;\int</em>{t_i}^{t_f}\bigg[\mathscr{L}(x_{cl},\dot{x}<em>{cl}(t))+\frac{\partial\mathscr{L}}{\partial x(t)}\bigg\vert</em>{x_{cl}}\cdot\eta(t)\<br>&amp;+\frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg\vert_{x_{cl}}\cdot\dot{\eta}(t)+\cdots\bigg],dt\<br>=&amp;S[x_{cl}(t)]+\delta S^{(1)}+\text{higher-order terms}<br>\end{aligned}$$</p>
+<p>Set $\delta S^{(1)}=0$ in analogy with the finite variable case:</p>
+<p>$$ 0=\delta S^{(1)}=\int_{t_i}^{t_f}\bigg[\frac{\partial\mathscr{L}}{\partial x(t)}\bigg\vert_{x_{cl}}\eta(t)+\frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg\vert_{x_{cl}}\dot{\eta}(t)\bigg],dt $$</p>
+<p>If we integrate the second term by part, it turns into</p>
+<p>$$ \frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg\vert_{x_{cl}}\cdot\eta(t)\bigg\vert_{t_i}^{t_f}-\int_{t_i}^{t_f}\bigg[\frac{d}{dt}\frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg]<em>{x</em>{cl}}\cdot\eta(t),dt $$</p>
+<p>The first of these terms vanishes due to $\eta(t_i)=\eta(t_f)=0$. So that</p>
+<p>$$ 0=\delta S^{(1)}=\int_{t_i}^{t_f}\bigg[\frac{\partial\mathscr{L}}{\partial x(t)}-\frac{d}{dt}\frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg]<em>{x</em>{cl}}\eta(t),dt $$</p>
+<p>Compare it to $\delta f^{(1)}\equiv\sum_{i=1}^n\frac{\partial f}{\partial x_i}\big\vert_{\mathbf{x}^0}u_i=0$, the discrete variable $\eta_i$ is replaced by $\eta(t)$; The sum over $i$ is replaced by an integral over $t$, and $\partial f/\partial x_i$ is replaced by</p>
+<p>$$ \frac{\partial\mathscr{L}}{\partial x(t)}-\frac{d}{dt}\frac{\partial\mathscr{L}}{\partial\dot{x}(t)} $$</p>
+<p>Since $\eta(t)$ are arbitrary, we may extract the analog of $\frac{\partial f}{\partial x_i}\Big\vert_{\mathbf{x}^0}=0$:</p>
+<p>$$ \bigg[\frac{\partial\mathscr{L}}{\partial x(t)}-\frac{d}{dt}\frac{\partial\mathscr{L}}{\partial\dot{x}(t)}\bigg]<em>{x</em>{cl}(t)}=0\quad\text{for }t_i&lt;t&lt;t_f $$</p>
 <h4 id="Why-we-need-quantum-field-theory"><a href="#Why-we-need-quantum-field-theory" class="headerlink" title="Why we need quantum field theory"></a>Why we need quantum field theory</h4><p>Quantum field theory was born of the necessity of dealing with the marriage of special relativity and quantum mechanics, just as the new science of string theory is been born of the necessity of dealing with the marriage of general relativity and quantum mechanics.</p>
-<h4 id="Path-integral-Formulation-of-Quantum-Physics"><a href="#Path-integral-Formulation-of-Quantum-Physics" class="headerlink" title="Path integral Formulation of Quantum Physics"></a>Path integral Formulation of Quantum Physics</h4><p>$$ \mathcal{A}(\text{particle to go from }S\text{ to }O\text{ in time }T)=\sum_{(paths)}\mathcal{A}(\text{particle to go from }S\text{ to }O\text{ in time }T\text{ following a particular path}) $$</p>
+<h4 id="Path-integral-Formulation-of-Quantum-Physics"><a href="#Path-integral-Formulation-of-Quantum-Physics" class="headerlink" title="Path integral Formulation of Quantum Physics"></a>Path integral Formulation of Quantum Physics</h4><p>$$\begin{aligned}<br>&amp;\mathcal{A}(\text{particle to go from }S\text{ to }O\text{ in time }T)\<br>&amp;=\sum_{(paths)}\mathcal{A}(\text{particle to go from }S\text{ to }O\text{ in time }T\text{ following a particular path})<br>\end{aligned}$$</p>
 <p>Use the unitarity of quantum mechanics: if we know the amplitude for each infinitesimal segment, then we just multiply  them together to get the amplitude of the whole path thus can we construct the amplitude along a path.<br>In quantum mechanics, the amplitude to propagate from a point $q_I$ to a point $q_F$ in time $T$ is governed by the unitary operator $e^{-iHT}$, where $H$ is the Hamiltonian that has the form of the classical Hamiltonian. In precise, the amplitude in question is just $\langle q_F\vert e^{-iHT}\vert q_I\rangle$.</p>
 <h4 id="From-Mattress-to-Field"><a href="#From-Mattress-to-Field" class="headerlink" title="From Mattress to Field"></a>From Mattress to Field</h4><p>Path integral representation of a single particle</p>
 <p>$$ Z\equiv\langle0\vert e^{-iHT}\vert 0\rangle=\int{Dq(t) e^{i\int_0^Tdt [\frac{1}{2}m\dot{q}^2-V(q)]}} $$</p>
@@ -196,7 +206,7 @@
 <p>$$ V(q_1,q_2,\cdots,q_N)=\sum_{ab}\frac{1}{2}k_{ab}q_aq_b+\cdots $$</p>
 <p>Let $q_a(t)$ to $\varphi(t,\vec{x})$, then the kinetic energy $\sum_a\frac{1}{2}m_a\dot{q}_a^2$ becomes $\int{d^2x\frac{1}{2}\sigma(\partial\varphi/\partial t)^2}$ as replace $\sum_a$ by $1/l^2$ and denote the mess per unit area $m_a/l^2$ by $\sigma$.</p>
 <p>Write $2q_aq_b=(q_a-q_b)^2-q_a^2-q_b^2$, simplicity $k_{ab}$ connect only nearest neighbors on the lattice, then $(q_a-q_b)^2\simeq l^2(\partial\varphi/\partial x)^2+\cdots$, thus we have</p>
-<p>$$ S(q)\rightarrow S(\varphi)\equiv\int_0^Tdt\int{d^2x \mathcal{L}(\varphi)}<br>=\int_0^Tdt\int d^2x \frac{1}{2}\Bigg\lbrace\sigma\bigg(\frac{\partial\varphi}{\partial t}\bigg)^2-\rho\Bigg[\bigg(\frac{\partial\varphi}{\partial x}\bigg)^2+\bigg(\frac{\partial\varphi}{\partial y}\bigg)^2\Bigg]<br>-\tau \varphi^2-\varsigma\varphi^4+\cdots\Bigg\rbrace $$</p>
+<p>$$\begin{aligned}<br>S(q)\rightarrow S(\varphi)\equiv&amp;\int_0^Tdt\int{d^2x \mathcal{L}(\varphi)}\<br>=&amp;\int_0^Tdt\int d^2x \frac{1}{2}\Bigg\lbrace\sigma\bigg(\frac{\partial\varphi}{\partial t}\bigg)^2-\rho\Bigg[\bigg(\frac{\partial\varphi}{\partial x}\bigg)^2+\bigg(\frac{\partial\varphi}{\partial y}\bigg)^2\Bigg]\<br>&amp;-\tau \varphi^2-\varsigma\varphi^4+\cdots\Bigg\rbrace<br>\end{aligned}$$</p>
 <p>Take the $T\rightarrow\infty$ so we can integrate over all of spacetime, writing $\rho=\sigma c^2$ and scaling $\varphi\rightarrow\varphi/\sqrt{\sigma}$, then we accessed the Lorentz invariance. Setting $c=1$, the Lorentz-invariant action $S$ turned to</p>
 <p>$$ S=\int{d^dx \Bigg[\frac{1}{2}(\partial\varphi)^2-\frac{1}{2}m^2\varphi^2-\frac{g}{3!}\varphi^3-\frac{\lambda}{4!}\varphi^4+\cdots\Bigg]} $$</p>
 <p>where $(\partial\varphi)^2\equiv\partial_\mu\varphi\partial^\mu\varphi=(\partial\varphi/\partial t)^2-(\partial\varphi/\partial x)^2-(\partial\varphi/\partial y)^2$ and $d=D+1$ with $D$ obviously valued 3 in reality but now is 2 in our model.</p>
@@ -219,7 +229,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数学， 物理</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">物理</a>
         		</li>
       		
 		</ul>
@@ -288,6 +302,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/02/08/Minecraft%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Minecraft云服务器简单使用方法
+        
+      </div>
+    </a>
   
   
     <a href="/2019/10/24/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%EF%BC%9A%E6%95%B0%E7%BB%84%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB/" id="article-nav-older" class="article-nav-link-wrap">
@@ -438,10 +461,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数学， 物理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -450,11 +469,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网页开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">物理</a>
               </li>
             
             <div class="clearfix"></div>

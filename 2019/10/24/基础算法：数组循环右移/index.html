@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="otellc的博客">
 <meta property="og:description" content="来源：PAT (Basic Level) Practice （中文）1008 数组元素循环右移问题 (20 分)   1008 数组元素循环右移问题一个数组$A$中存有$N（&amp;gt;0）$个整数，在不允许使用另外数组的前提下，将每个整数循环向右移$M（≥0）$个位置，即将$A$中的数据由$（A_0A_1…A_{N-1}）$变换为$（A_{N-M}…A_{N-1}A_0A_1…A_{N-M-1}）$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-27T09:50:57.697Z">
+<meta property="og:updated_time" content="2020-07-01T01:00:44.166Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -54,7 +54,7 @@
 		
 
 		<nav>
-			总字数 <span class="post-count">2.9k</span>
+			总字数 <span class="post-count">4.8k</span>
 		</nav>
 		
 		<nav class="header-menu">
@@ -150,7 +150,7 @@
     
       <header class="article-header">
         <div align="center" class="post-count">
-          字数：647字 | 预计阅读时长：2分钟
+          字数：649字 | 预计阅读时长：2分钟
         </div>
         
   
@@ -171,19 +171,20 @@
         <p>来源：<a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805316250615808" target="_blank" rel="noopener">PAT (Basic Level) Practice （中文）1008 数组元素循环右移问题 (20 分)</a></p>
 <hr>
 <blockquote>
-<h3 id="1008-数组元素循环右移问题"><a href="#1008-数组元素循环右移问题" class="headerlink" title="1008 数组元素循环右移问题"></a><center>1008 数组元素循环右移问题<center></h3><p>一个数组$A$中存有$N（&gt;0）$个整数，在不允许使用另外数组的前提下，将每个整数循环向右移$M（≥0）$个位置，即将$A$中的数据由$（A_0A_1…A_{N-1}）$变换为$（A_{N-M}…A_{N-1}A_0A_1…A_{N-M-1}）$（最后M个数循环移至最前面的M个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
+<h3 id="1008-数组元素循环右移问题"><a href="#1008-数组元素循环右移问题" class="headerlink" title="1008 数组元素循环右移问题"></a><center>1008 数组元素循环右移问题<center></h3><p>一个数组$A$中存有$N（&gt;0）$个整数，在不允许使用另外数组的前提下，将每个整数循环向右移$M（≥0）$个位置，即将$A$中的数据由$（A_0A_1…A_{N-1}）$变换为$（A_{N-M}…A_{N-1}A_0A_1…A_{N-M-1}）$（最后 M 个数循环移至最前面的 M 个位置）。如果需要考虑程序移动数据的次数尽量少，要如何设计移动的方法？</p>
 </blockquote>
 <a id="more"></a>
 
-<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h4><p>每个输入包含一个测试用例，第1行输入$N（1≤N≤100）$和$M（≥0）$；第2行输入$N$个整数，之间用空格分隔。</p>
-<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h4><p>在一行中输出循环右移$M$位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。</p>
-<h4 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
-<h4 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> <span class="number">6</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>每个输入包含一个测试用例，第 1 行输入$N（1≤N≤100）$和$M（≥0）$；第 2 行输入$N$个整数，之间用空格分隔。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>在一行中输出循环右移$M$位以后的整数序列，之间用空格分隔，序列结尾不能有多余空格。</p>
+<h4 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> <span class="number">6</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>一开始，我以为直接数组挨个赋值<code>A[i] = A[(i+M) % N]</code>就可以实现了，毕竟我只会这一种方法… 不过果然不行啦，照着这个模N替换的思路思索了很久依旧无果，只能放弃+当场自闭了。<br>接着就想到可以将数组循环右移1位m次，稳定不会出错，但这无疑就是最低效的实现，其它的邪招也没有用的必要，果然还是求助大佬来得实在些…</p>
-<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>取样例进行观察，我们首先发现输出：<br><code>5 6 1 2 3 4</code><br>实际上是由两部分两部分组成，各保持有序。于是将原数组看做两部分：<br><code>1 2 3 4 | 5 6</code><br>试着分别做一些骚操作，发现将其分别反转得：<br><code>4 3 2 1 | 6 5</code><br>即是我们想要的结果的逆序，再对整体反转即得：<br><code>5 6 | 1 2 3 4</code><br>… … 这是什么神仙洞察力(╯‵□′)╯︵┻━┻  </p>
-<h3 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h3><p>经过上面的分析，实现起来就很简单了，首先是反转函数：</p>
+<p>一开始，我以为直接数组挨个赋值<code>A[i] = A[(i+M) % N]</code>就可以实现了，毕竟我只会这一种方法… 不过果然不行啦，照着这个模 N 替换的思路思索了很久依旧无果，只能放弃+当场自闭了。<br>接着就想到可以将数组循环右移 1 位 m 次，稳定不会出错，但这无疑就是最低效的实现，其它的邪招也没有用的必要，果然还是求助大佬来得实在些…</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>取样例进行观察，我们首先发现输出：<br><code>5 6 1 2 3 4</code><br>实际上是由两部分两部分组成，各保持有序。于是将原数组看做两部分：<br><code>1 2 3 4 | 5 6</code><br>试着分别做一些骚操作，发现将其分别反转得：<br><code>4 3 2 1 | 6 5</code><br>即是我们想要的结果的逆序，再对整体反转即得：<br><code>5 6 | 1 2 3 4</code><br>… … 这是什么神仙洞察力(╯‵□′)╯︵┻━┻</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>经过上面的分析，实现起来就很简单了，首先是反转函数：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = m, j = n, temp;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        temp = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = temp;</span><br><span class="line">        ++i;</span><br><span class="line">        --j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>接着在求解函数里用就对了：</p>
@@ -436,10 +437,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数学， 物理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -448,11 +445,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网页开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">物理</a>
               </li>
             
             <div class="clearfix"></div>
