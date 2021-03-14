@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="otellc的博客">
 <meta property="og:description" content="使用 VSCode 可方便的在 Vue 全家桶的环境下来开发网页应用，不过由于所有的内容都需要使用插件和命令行的方式来实现，操作相对复杂，以下简单的记录下搭建环境的全过程，包括：  Vue 工程的搭建（_默认已安装好并使用过 vue-cli_） 网页开发所需的主要插件及提升工作效率的插件的选择及配置 Vue 全家桶的配置和安装">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-01T05:01:40.022Z">
+<meta property="og:updated_time" content="2021-01-30T11:54:47.357Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -54,7 +54,7 @@
 		
 
 		<nav>
-			总字数 <span class="post-count">14.2k</span>
+			总字数 <span class="post-count">8.9k</span>
 		</nav>
 		
 		<nav class="header-menu">
@@ -182,8 +182,8 @@
 <li>使用 VS Code 打开想要存放新建工程的文件夹，例如我是 <code>D:\Coding\VSCode</code>，需要在这个文件夹下使用命令行来创建项目。</li>
 <li>快捷键 <code>Ctrl + ~</code> 打开 bush，使用命令 <code>vue create project-name</code> 来创建新项目。</li>
 <li>创建成功后使用 VS Code 打开新建的项目的文件夹，即可开始开发。</li>
+<li>在启动项目前，需要先使用 <code>npm install</code> 命令来安装依赖项再编译启动项目。</li>
 <li><code>npm run serve</code> 编译启动项目。</li>
-<li>若是下载的别人的 Vue 项目，则可能需要先使用 <code>npm install</code> 命令来安装依赖项再编译启动项目。</li>
 </ol>
 <h3 id="网页开发所需的主要插件及提升工作效率的插件的选择及配置"><a href="#网页开发所需的主要插件及提升工作效率的插件的选择及配置" class="headerlink" title="网页开发所需的主要插件及提升工作效率的插件的选择及配置"></a>网页开发所需的主要插件及提升工作效率的插件的选择及配置</h3><p>必备插件：</p>
 <ol>
@@ -204,7 +204,7 @@
 <ol>
 <li><strong>One Dark Pro</strong>，让你的编辑器更好看更养眼。</li>
 <li><strong>Material Icon Theme</strong>，让你的编辑器更好看更养眼。</li>
-<li><strong>live2d</strong>，让你的编辑器更好看更养眼，但好像有bug，可能对你的编辑器带来毁灭性的打击。（谢谢兄弟，马上重装系统）。</li>
+<li><strong>live2d</strong>，让你的编辑器更好看更养眼，但好像有bug，可能对你的编辑器带来毁灭性的打击。（谢谢兄弟，马上重装系统）</li>
 </ol>
 <p>最后对 Prettier 插件的使用进行一些详细的讲解：<br>Prettier 的默认设置与 VS Code 的代码格式化存在冲突的情况，首先需要对 VS Code 的设置进行一下禁用。<br>在项目根目录下新建 <code>.vscode</code> 文件夹并建立 <code>settings.json</code> 文件，设置如下内容：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"eslint.validate"</span>: [</span><br><span class="line">    <span class="string">"javascript"</span>,</span><br><span class="line">    <span class="string">"javascriptreact"</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">      <span class="attr">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"editor.codeActionsOnSave"</span>: &#123;</span><br><span class="line">    <span class="attr">"source.fixAll.eslint"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"editor.tabSize"</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">"editor.formatOnSave"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"prettier.semi"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"prettier.singleQuote"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -325,11 +325,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/03/%E6%B5%81%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/08/14/Android-MVVM-%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AAndroid-Jetpack-%E6%9C%80%E4%BD%B3%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          流体动力学模拟
+          Android MVVM 篇（一）：Android Jetpack 最佳项目实践
         
       </div>
     </a>
@@ -483,22 +483,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网页开发</a>
               </li>
              
@@ -511,6 +495,22 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Electron</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">桌面开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
@@ -519,15 +519,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">渲染</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">流体动力学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,27 +531,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">物理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">我的世界</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">格雷</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模组生存</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">游戏教程</a>
+                <a href="javascript:void(0)" class="js-tag color2">Matlab</a>
               </li>
             
             <div class="clearfix"></div>

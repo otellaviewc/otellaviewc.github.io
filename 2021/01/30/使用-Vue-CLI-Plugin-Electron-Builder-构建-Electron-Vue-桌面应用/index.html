@@ -6,14 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://otellaviewc.github.io">
-  <title>Tag: Android | otellc的博客</title>
+  <title>使用 Vue CLI Plugin Electron Builder 构建 Electron-Vue 桌面应用 | otellc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Android,博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="otellc的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;tags&#x2F;Android&#x2F;index.html">
+  <meta name="description" content="在 搭建 Electron Vue 项目的过程中遇到了多个需要注意的问题，故对搭建项目的正确过程进行一个简单的记录。 搭建项目的基本过程为创建 Vue 项目，接着安装 Vue CLI 插件 Electron Builder，此插件会自动安装 Electron、生成 Electron 相关的文件，提供命令用于自动的编译 Vue 和 Electron、使用 electron 的 electron-bu">
+<meta name="keywords" content="Vue,Electron,桌面开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Vue CLI Plugin Electron Builder 构建 Electron-Vue 桌面应用">
+<meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2021&#x2F;01&#x2F;30&#x2F;%E4%BD%BF%E7%94%A8-Vue-CLI-Plugin-Electron-Builder-%E6%9E%84%E5%BB%BA-Electron-Vue-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="otellc的博客">
+<meta property="og:description" content="在 搭建 Electron Vue 项目的过程中遇到了多个需要注意的问题，故对搭建项目的正确过程进行一个简单的记录。 搭建项目的基本过程为创建 Vue 项目，接着安装 Vue CLI 插件 Electron Builder，此插件会自动安装 Electron、生成 Electron 相关的文件，提供命令用于自动的编译 Vue 和 Electron、使用 electron 的 electron-bu">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-03-01T03:59:02.638Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -142,64 +145,222 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-使用-Vue-CLI-Plugin-Electron-Builder-构建-Electron-Vue-桌面应用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
+      <header class="article-header">
+        <div align="center" class="post-count">
+          字数：1.4k字 | 预计阅读时长：6分钟
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/14/Android-MVVM-%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AAndroid-Jetpack-%E6%9C%80%E4%BD%B3%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/" class="archive-article-date">
-  	<time datetime="2020-08-14T13:58:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-14</time>
-</a>
-        </div>
-    	 
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/14/Android-MVVM-%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AAndroid-Jetpack-%E6%9C%80%E4%BD%B3%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/">Android MVVM 篇（一）：Android Jetpack 最佳项目实践</a>
+    <h1 class="article-title" itemprop="name">
+      使用 Vue CLI Plugin Electron Builder 构建 Electron-Vue 桌面应用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/01/30/%E4%BD%BF%E7%94%A8-Vue-CLI-Plugin-Electron-Builder-%E6%9E%84%E5%BB%BA-Electron-Vue-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-01-30T12:09:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在 搭建 Electron Vue 项目的过程中遇到了多个需要注意的问题，故对搭建项目的正确过程进行一个简单的记录。</p>
+<p>搭建项目的基本过程为创建 Vue 项目，接着安装 Vue CLI 插件 Electron Builder，此插件会自动安装 Electron、生成 Electron 相关的文件，提供命令用于自动的编译 Vue 和 Electron、使用 electron 的 electron-builder 生成安装包和应用。</p>
+<a id="more"></a>
+
+<h2 id="创建-Vue-项目"><a href="#创建-Vue-项目" class="headerlink" title="创建 Vue 项目"></a>创建 Vue 项目</h2><p>在合适的目录下使用如下指令创建 vue 项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create electron-vue-demo</span><br></pre></td></tr></table></figure>
+
+<p>会出现选项用以选择使用的配置，CLI 版本较新，提供的默认配置 1 较为满意，我在这里可直接选择第一个：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue CLI v4.5.11</span><br><span class="line">? Please pick a preset: (Use arrow keys)</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> product ([Vue 2] dart-sass, babel, typescript, router, vuex, eslint)</span></span><br><span class="line">  Default ([Vue 2] babel, eslint)</span><br><span class="line">  Default (Vue 3 Preview) ([Vue 3] babel, eslint)</span><br><span class="line">  Manually select features</span><br></pre></td></tr></table></figure>
+
+<p>选择默认配置之后等待完成即可。完成后会显示如下提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">🎉  Successfully created project electron-vue-demo.</span><br><span class="line">👉  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"> $ <span class="built_in">cd</span> electron-vue-demo</span><br><span class="line"> $ npm run serve</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-VSCode-用以编写-Vue-项目"><a href="#配置-VSCode-用以编写-Vue-项目" class="headerlink" title="配置 VSCode 用以编写 Vue 项目"></a>配置 VSCode 用以编写 Vue 项目</h2><p>创建项目后就可以使用 VSCode 来查看项目了，打开项目后目录结构如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; node_modules</span><br><span class="line">&gt; public</span><br><span class="line">v src</span><br><span class="line">  &gt; assets</span><br><span class="line">  &gt; components</span><br><span class="line">  &gt; router</span><br><span class="line">  &gt; store</span><br><span class="line">  &gt; views</span><br><span class="line">    App.vue</span><br><span class="line">    main.ts</span><br><span class="line">    shims-tsx<span class="selector-class">.d</span><span class="selector-class">.ts</span></span><br><span class="line">    shims-vue<span class="selector-class">.d</span><span class="selector-class">.ts</span></span><br><span class="line">  .gitignore</span><br><span class="line">  babel<span class="selector-class">.config</span><span class="selector-class">.js</span></span><br><span class="line">  package-lock.json</span><br><span class="line">  package.json</span><br><span class="line">  README.md</span><br><span class="line">  tsconfig.json</span><br></pre></td></tr></table></figure>
+
+<p>README.md 里已经写好了使用方法，使用命令 <code>npm run serve</code> 即可启动项目，同时如果启动过程出现报错可以考虑先执行指令 <code>npm install</code>，或许有所帮助。</p>
+<p>编写 Vue 项目需要安装 Vueter、ESlint 和 Prettier 这三个插件，接着还需要保证它们能正常的协作。</p>
+<h3 id="配置-ESLint-和-Prettier"><a href="#配置-ESLint-和-Prettier" class="headerlink" title="配置 ESLint 和 Prettier"></a>配置 ESLint 和 Prettier</h3><p>安装 Prettier 后我们需要设置其为 VSCode 的默认代码格式程序，在设置里将 Default Formatter 设置为 esbenp.prettier-vscode。</p>
+<p>此时在文件里按 <code>ctrl + s</code> 保存文件时 Prettier 即会自动的格式化文件，不过默认的格式化设定可能不是很让人满意，例如我想要缩进为两格，同时不想要语句后的分号，此时需要对问题的来源分别进行设置。</p>
+<p>缩进的问题发生在换行时 VSCode 默认添加了 4 格空格，则在 VSCode 里将 Tab Size 选项设置为 2 即可，</p>
+<p>Prettier 的格式化选项可以通过一个 <code>.prettierrc</code> 文件来更改，在项目根目录下创建文件 <code>.prettierrc.json</code> 并写下如下内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"trailingComma"</span>: <span class="string">"es5"</span>,</span><br><span class="line">  <span class="attr">"tabWidth"</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">"semi"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"singleQuote"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置好后再次格式化文件便会自动生效。</p>
+<p>但此时格式化后的内容会和 ESLint 的格式产生冲突，可以考虑再将 ESLint 的格式设置进行同步，不过还有两个 eslint 插件可以实现这个过程，分别是 eslint-plugin-prettier 和 eslint-config-prettier。</p>
+<p>使用如下指令分别安装这两个插件：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev eslint-plugin-prettier</span><br><span class="line">npm install --save-dev eslint-config-prettier</span><br></pre></td></tr></table></figure>
+
+<p>接着打开项目的 <code>package.json</code> 文件，修改 <code>eslintConfig</code>，将 <code>extends</code> 的最后一行添加上 <code>&quot;plugin:prettier/recommended&quot;</code>，删去 <code>&quot;eslint:recommended&quot;</code> 这一行，修改后类似如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">"eslintConfig": &#123;</span><br><span class="line">    "root": true,</span><br><span class="line">    "env": &#123;</span><br><span class="line">        "node": true</span><br><span class="line">    &#125;,</span><br><span class="line">    "extends": [</span><br><span class="line">        "plugin:vue/essential",</span><br><span class="line">        "@vue/typescript/recommended",</span><br><span class="line">        "@vue/prettier",</span><br><span class="line">        "@vue/prettier/@typescript-eslint",</span><br><span class="line">        <span class="string">"plugin:prettier/recommended"</span></span><br><span class="line">    ],</span><br><span class="line">    "parserOptions": &#123;</span><br><span class="line">        "ecmaVersion": 2020</span><br><span class="line">    &#125;,</span><br><span class="line">    "rules": &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-Vue-CLI-插件-Electron-Builder"><a href="#安装-Vue-CLI-插件-Electron-Builder" class="headerlink" title="安装 Vue CLI 插件 Electron Builder"></a>安装 Vue CLI 插件 Electron Builder</h3><p>使用 Vue CLI 的插件 Electron Builder 可以自动的将 Vue 项目编译为 Electron 项目。</p>
+<p>在项目根目录下使用如下命令安装此插件：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add electron-builder</span><br></pre></td></tr></table></figure>
+
+<p>但是，默认情况下安装是有大概率因为 Electron 无法下载而安装失败，所以需要先设置 npm 下载 Electron 的相关镜像再安装。</p>
+<p>在项目根目录下创建 <code>.npmrc</code> 文件并写入如下内容：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ELECTRON_MIRROR=https:<span class="regexp">//</span><span class="built_in">npm</span>.taobao.org<span class="regexp">/mirrors/electron/</span></span><br><span class="line">ELECTRON_BUILDER_BINARIES_MIRROR=http:<span class="regexp">//</span><span class="built_in">npm</span>.taobao.org<span class="regexp">/mirrors/electron-builder-binaries/</span></span><br></pre></td></tr></table></figure>
+
+<p>接着使用 <code>vue add electron-builder</code> 指令安装。</p>
+<p>此时安装过程中的下载便能正常进行了，不过下载完成后出现了警告和报错，警告如下：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARN  It <span class="keyword">is</span> detected that you are <span class="keyword">using</span> Vue Router. It must <span class="keyword">function</span> <span class="keyword">in</span> hash mode <span class="keyword">to</span> <span class="keyword">work</span> <span class="keyword">in</span> Electron. Learn more at https://goo.gl/GM1xZG .</span><br></pre></td></tr></table></figure>
+
+<p>将 <code>src/router/index.ts</code> 里的 <code>mode</code> 从 <code>history</code> 更改为 <code>hash</code> 即可。</p>
+<p>同时报了类似如下的错误：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">error: </span>Parsing error: Unexpected token &lt; at src\views\Home.vue:1:1:</span><br></pre></td></tr></table></figure>
+
+<p>此时插件的安装基本完成了，这个报错（属于间歇性抽风）可以通过 <code>npm install</code> 和重启 VSCode 来解决。</p>
+<h2 id="编译启动APP"><a href="#编译启动APP" class="headerlink" title="编译启动APP"></a>编译启动APP</h2><p>使用命令 <code>npm run electron:serve</code> 来编译并启动 App，编译成功后会自动的打开编译出的 Electron App。</p>
+<p>第一次使用此指令编译启动 App 时会自动下载安装 <code>Vue Devtools</code>，</p>
+<h2 id="打包APP"><a href="#打包APP" class="headerlink" title="打包APP"></a>打包APP</h2><p>使用如下 <code>electron:build</code> npm 任务即可打包 APP。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run electron:build</span><br></pre></td></tr></table></figure>
+
+<p>打包信息如下：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">INFO  Building app with electron-builder:</span><br><span class="line">  • electron-builder  version=<span class="number">22.9</span>.<span class="number">1</span> os=<span class="number">10.0</span>.<span class="number">19041</span></span><br><span class="line">(node:<span class="number">16112</span>) ExperimentalWarning: The fs.promises API is experimental</span><br><span class="line">  • description is missed <span class="keyword">in</span> the package.json  appPackageFile=D:\Coding\Js\electron-vue-demo\dist_electron\bundled\package.json</span><br><span class="line">  • author is missed <span class="keyword">in</span> the package.json  appPackageFile=D:\Coding\Js\bcr-arena-script\dist_electron\bundled\package.json     </span><br><span class="line">  • writing effective config  file=dist_electron\builder-effective-config.yaml</span><br><span class="line">  • packaging       platform=win32 arch=x64 electron=<span class="number">9.4</span>.<span class="number">2</span> appOutDir=dist_electron\win-unpacked</span><br><span class="line">  • default Electron icon is used  reason=application icon is not set</span><br><span class="line">  • building        target=nsis file=dist_electron\electron-vue-demo Setup <span class="number">0.1</span>.<span class="number">0</span>.exe archs=x64 oneClick=true perMachine=false</span><br><span class="line">  • building block map  blockMapFile=dist_electron\electron-vue-demo Setup <span class="number">0.1</span>.<span class="number">0</span>.exe.blockmap</span><br><span class="line"> DONE  Build complete!</span><br></pre></td></tr></table></figure>
+
+<p>其中分别有三条警告，分别是 <code>author</code>、<code>description</code> 和 <code>icon</code> 未设置，设置方式以及其它细节（例如 <code>AppId</code> 的设置）参见参考资料。</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>参考资料：</p>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/75764907" target="_blank" rel="noopener">手把手教你使用Electron5+vue-cli3开发跨平台桌面应用</a></li>
+<li><a href="https://www.electron.build/" target="_blank" rel="noopener">electron-builder 官网</a></li>
+<li><a href="https://www.electronjs.org/docs/tutorial/quick-start" target="_blank" rel="noopener">Electron 快速启动指南</a></li>
+<li><a href="https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/" target="_blank" rel="noopener">Vue CLI Plugin Electron Builder Quick Start</a></li>
+<li><a href="https://www.azimiao.com/6208.html" target="_blank" rel="noopener">解决electron-builder打包时下载依赖慢的问题</a></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MVVM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Electron</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">桌面开发</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://otellaviewc.github.io/2021/01/30/%E4%BD%BF%E7%94%A8-Vue-CLI-Plugin-Electron-Builder-%E6%9E%84%E5%BB%BA-Electron-Vue-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/12/31/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AE%B9%E8%BF%81%E7%A7%BB%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">服务器内容迁移笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -222,9 +383,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
