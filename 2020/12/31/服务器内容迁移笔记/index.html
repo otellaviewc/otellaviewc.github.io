@@ -9,14 +9,14 @@
   <title>服务器内容迁移笔记 | otellc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Linux 服务器很好用，但总有到期的时候（毕竟是白嫖的服务器）。 在过去的一年里，分别在服务器上做过这些内容：  运行操作系统原理上机课 pintos 虚拟机，并使用 XManager 连接 qemu 窗口。 搭建并运行 PaddleOCR 文字识别 Docker 服务。 搭建 jupter notebook 运行 Python 脚本，同时还大幅度的更改了编辑器的样式。  现在要做的是将部分有用">
-<meta name="keywords" content="Linux">
+<meta name="keywords" content="Linux,jupyter,notebook">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器内容迁移笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;otellaviewc.github.io&#x2F;2020&#x2F;12&#x2F;31&#x2F;%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%85%E5%AE%B9%E8%BF%81%E7%A7%BB%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="otellc的博客">
 <meta property="og:description" content="Linux 服务器很好用，但总有到期的时候（毕竟是白嫖的服务器）。 在过去的一年里，分别在服务器上做过这些内容：  运行操作系统原理上机课 pintos 虚拟机，并使用 XManager 连接 qemu 窗口。 搭建并运行 PaddleOCR 文字识别 Docker 服务。 搭建 jupter notebook 运行 Python 脚本，同时还大幅度的更改了编辑器的样式。  现在要做的是将部分有用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-01T06:04:31.826Z">
+<meta property="og:updated_time" content="2021-05-24T03:09:16.567Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="otellc的博客" type="application/atom+xml">
@@ -54,7 +54,7 @@
 		
 
 		<nav>
-			总字数 <span class="post-count">9k</span>
+			总字数 <span class="post-count">9.3k</span>
 		</nav>
 		
 		<nav class="header-menu">
@@ -150,7 +150,7 @@
     
       <header class="article-header">
         <div align="center" class="post-count">
-          字数：1k字 | 预计阅读时长：3分钟
+          字数：1.3k字 | 预计阅读时长：5分钟
         </div>
         
   
@@ -201,11 +201,12 @@
 
 <p>配置文件应放在 <code>~/.jupyter/</code> 文件夹内，大概直接复制整个备份下来的 <code>.jupyter</code> 文件夹即可。</p>
 <p><code>.jupyter</code> 文件夹内存放着如下的文件/文件夹：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">drwxr-xr-x  3 root root  4096 Dec 21 01:30 custom/</span><br><span class="line">-rw-------  1 root root   189 Dec 18 13:06 jupyter_notebook_config.json</span><br><span class="line">-rw-r--r--  1 root root 47063 Dec  4 10:10 jupyter_notebook_config.py</span><br><span class="line">-rw-r--r--  1 root root    26 Dec  4 10:55 migrated</span><br><span class="line">drwxr-xr-x  2 root root  4096 Dec  5 18:10 nbconfig/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">drwxr-xr-x  3 root root  4096 Dec 21 01:30 custom/</span><br><span class="line">-rw-------  1 root root   189 Dec 18 13:06 jupyter_notebook_config.json</span><br><span class="line">-rw-r--r--  1 root root 47063 Dec  4 10:10 jupyter_notebook_config.py</span><br><span class="line">-rw-r--r--  1 root root    26 Dec  4 10:55 migrated</span><br><span class="line">drwxr-xr-x  2 root root  4096 Dec  5 18:10 nbconfig/</span><br></pre></td></tr></table></figure>
 
 <p><code>jupyter_notebook_config.json</code> 中分别指定了 notebook 的 <strong>地址</strong>、<strong>端口</strong>、<strong>文件夹</strong> 等其它选项。</p>
+<p><code>custom</code> 文件夹为 <code>jupyter</code> 存放样式资源的文件夹，可在此修改样式表。不过需要注意的是，修改 <code>jupyter</code> 使用的主题时会重置自定义的样式表。</p>
 <p><code>nbconfig</code> 是 notebook 的 <code>nbextensions</code> 的配置文件，因为在 notebook 里使用了一些扩展功能，例如显示文件大纲。想在新的 notebook 中重新启用这些扩展需要自行安装 <code>nbextensions</code> 库。</p>
-<p><code>custom</code> 文件夹是自定义 notebook 的样式的地方，可以通过修改 <code>css</code> 样式表的方式更改呈现出的页面的外观。安装 Python 包 <code>jupyterthemes</code> 后就可以使用多种预设好的 Jupyter 主题。</p>
+<h3 id="jupyter-主题"><a href="#jupyter-主题" class="headerlink" title="jupyter  主题"></a>jupyter  主题</h3><p><code>custom</code> 文件夹是自定义 notebook 的样式的地方，可以通过修改 <code>css</code> 样式表的方式更改呈现出的页面的外观。安装 Python 包 <code>jupyterthemes</code> 后就可以使用多种预设好的 Jupyter 主题。</p>
 <p>安装主题插件：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install jupyterthemes</span><br></pre></td></tr></table></figure>
 
@@ -216,7 +217,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jt -t onedork</span><br></pre></td></tr></table></figure>
 
 <p>因为 <code>onedork</code> 主题的样式部分地方存在 bug 或看起来不顺眼的地方，所以我对样式表进行了大幅度的修改，需使用保存下来的 <code>custom.css</code> 文件进行替换。</p>
-<p>以上。</p>
+<h3 id="解决绘图问题"><a href="#解决绘图问题" class="headerlink" title="解决绘图问题"></a>解决绘图问题</h3><p><code>jupyter</code> 与 <code>python</code> 的绘图库 <code>matplotlib</code> 有良好的集成，然而在中文兼容以及主题兼容问题上需要进一步的配置。</p>
+<h4 id="主题兼容："><a href="#主题兼容：" class="headerlink" title="主题兼容："></a>主题兼容：</h4><p><code>matplotlib</code> 默认绘图风格为白色网格黑色文字透明背景，与部分暗色主题相当的不搭配，同时无法看清背景上的文字。解决方案为执行如下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> jupyterthemes <span class="keyword">import</span> jtplot</span><br><span class="line"></span><br><span class="line">jtplot.style(grid=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="中文兼容："><a href="#中文兼容：" class="headerlink" title="中文兼容："></a>中文兼容：</h4><p><code>jupyter</code> 的 <code>matplotlib</code> 在绘制中文时会出现报错且中文显示乱码的问题，常规解决方案可参考博客：<a href="https://positive.blog.csdn.net/article/details/88716313" target="_blank" rel="noopener">jupyter notebook中 matplotlib 绘图包的中文乱码问题</a>，总结下来即为在指定的位置安装字体，配置 <code>matplotlibrc</code> 文件设置字体。但 <code>jupyterthemes</code> 的兼容配置会再次更改字体的设置，所以需要再次使用代码修改字体为下载的字体：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'SimHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -231,6 +237,14 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jupyter</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">notebook</a>
         		</li>
       		
 		</ul>
@@ -458,18 +472,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Electron</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">桌面开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -482,7 +484,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Bootstrap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Electron</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">桌面开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jupyter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">notebook</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,10 +517,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
